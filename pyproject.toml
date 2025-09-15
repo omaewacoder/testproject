@@ -10,12 +10,12 @@ dependencies = [
     "psycopg2-binary",
     "matplotlib",
     "statsmodels",
-    "pmdarima",
+    "prophet",   
 ]
 
 [build-system]
-requires = ["uv"]
-build-backend = "uv"
+requires = ["setuptools>=61.0.0", "wheel"]  
+build-backend = "setuptools.build_meta" 
 
 [tool.uv]
 dev-dependencies = [
@@ -24,6 +24,3 @@ dev-dependencies = [
     "isort",
     "flake8",
 ]
-
-[tool.uv.run]
-script = "src.main"
