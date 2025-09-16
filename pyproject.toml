@@ -10,8 +10,13 @@ dependencies = [
     "psycopg2-binary",
     "matplotlib",
     "statsmodels",
-    "prophet",   
+    "prophet",
+    "pmdarima>=2.0.4",
 ]
+
+[tool.uv.extra-build-dependencies]
+# Зависимости, необходимые для сборки pmdarima
+pmdarima = ["numpy", "Cython"]
 
 [build-system]
 requires = ["setuptools>=61.0.0", "wheel"]  
